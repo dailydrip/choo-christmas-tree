@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "choo": "^6.6.0",
+    "choo-audio": "^1.0.0",
     "choo-devtools": "^2.3.0",
     "choo-service-worker": "^2.3.1",
     "sheetify": "^6.2.0",

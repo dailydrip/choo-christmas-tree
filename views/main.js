@@ -1,27 +1,53 @@
-var html = require('choo/html')
+var html = require("choo/html");
 
-var TITLE = '🚂🚋🚋'
+var TITLE = "🚂🚋🚋";
 
-module.exports = view
+module.exports = view;
 
-function view (state, emit) {
-  if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
+function view(state, emit) {
+  if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE);
 
   return html`
-    <body class="sans-serif">
-      <h1 class="f-headline pa3 pa4-ns">
-        Choo choo!
-      </h1>
+    <body>
+      <div class="container">
+        <div class="tree">
+          <div class="star"></div>
+          <div class="trunk"></div>
+          <div class="ornaments -top">
+            <div class="ornament -red -on"></div>
+            <div class="ornament -yellow -off"></div>
+          </div>
+          <div class="ornaments -middle">
+            <div class="ornament -purple -off"></div>
+            <div class="ornament -blue -on"></div>
+          </div>
+          <div class="ornaments -bottom">
+            <div class="ornament -yellow -on"></div>
+            <div class="ornament -red -off"></div>
+          </div>
+          <div class="white-decoration -top">
+          </div>
+          <div class="white-decoration -middle -one">
+          </div>
+          <div class="white-decoration -middle -two">
+          </div>
+          <div class="white-decoration -bottom">
+          </div>
+        </div>
+    </div>
+  </body>
+  `;
 
-      <div class="ph3 ph4-ns">
-        <p>Current number of clicks: ${state.totalClicks}</p>
-
-        <button class="f5 dim br-pill ph3 pv2 mb2 dib white bg-hot-pink bn pointer" onclick=${handleClick}>Click Me!</button>
-      </div>
-    </body>
-  `
-
-  function handleClick () {
-    emit('clicks:add', 1)
+  function handleClick() {
+    emit("clicks:add", 1);
   }
+}
+
+function loadSounds(state, emitter, app) {
+  emitter.on("DOMContentLoaded", function() {
+    emitter.emit("audio:load", "./jingle_bell.wav");
+    emitter.on("audio:load-complete", function() {
+      emitter.emit("audio:play");
+    });
+  });
 }

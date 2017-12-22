@@ -1,0 +1,50 @@
+.white-decoration {
+  border: solid .3rem;
+  border-color: white transparent transparent transparent;
+}
+
+.white-decoration.-top {
+  border-radius: 50%/2rem 2rem 0 0;
+  height: 5rem;
+  left: -5.5rem;
+  position: absolute;
+  top: -.75rem;
+  transform: rotate(160deg);
+  width: 8rem;
+}
+
+.white-decoration.-middle.-one {
+  border-radius: 50%/3rem 3rem 0 0;
+  height: 5rem;
+  left: -6.75rem;
+  position: absolute;
+  top: 4.7rem;
+  transform: rotate(165deg);
+  width: 10rem;
+  z-index: 1;
+}
+
+.white-decoration.-middle.-two {
+  border-radius: 50%/3rem 3rem 0 0;
+  height: 5rem;
+  left: -4rem;
+  position: absolute;
+  top: 5.5rem;
+  transform: rotate(200deg);
+  width: 12rem;
+  z-index: 1;
+}
+
+.white-decoration.-bottom {
+  border-radius: 50%/3rem 3rem 0 0;
+  height: 5rem;
+  left: -8rem;
+  position: absolute;
+  top: 10.5rem;
+  transform: rotate(180deg);
+  width: 16rem;
+  z-index: 2;
+}
+
+
+

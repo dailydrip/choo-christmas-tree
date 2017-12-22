@@ -1,0 +1,64 @@
+.tree {
+  border-radius: 35%;
+  border-style: solid;
+  border-width: 6rem 6em 8em 6em;
+  border-color: transparent transparent green transparent;
+  height: 0;
+  left: 35%;
+  position: absolute;
+  width: 0;
+}
+
+.tree:before,
+.tree:after {
+  border-radius: 40%;
+  border-style: solid;
+  border-color: transparent transparent green transparent;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.tree:before {
+  border-width: 0 9em 9em 9em;
+  top: 5rem;
+  left: -9rem;
+}
+
+.tree:after {
+  border-width: 0 12em 12em 12em;
+  left: -12rem;
+  top: 8rem;
+}
+
+
+.trunk {
+  border: .2rem solid #4f3222;
+  left: -2rem;
+  background: #7e4a35;
+  height: 6rem;
+  position: absolute;
+  top: 18rem;
+  width: 4rem;
+}
+
+.trunk:before,
+.trunk:after {
+  background-color:#4f3222;
+  content: '';
+  height: 30%;
+  width: .1rem;
+  position: absolute;
+}
+
+.trunk:after {
+  right: 25%;
+  bottom: 25%;
+}
+
+.trunk:before {
+  right: 65%;
+  bottom: 10%;
+}
+

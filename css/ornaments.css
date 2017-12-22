@@ -1,0 +1,105 @@
+.ornaments {
+  position: absolute;
+  width: 100%;
+}
+
+.ornaments.-top {
+  top: 6rem;
+}
+
+.ornaments.-middle {
+  top: 12rem;
+  z-index: 1;
+}
+
+.ornaments.-bottom {
+  top: 16rem;
+  z-index: 2;
+}
+
+.ornaments > .ornament {
+  border-radius: 50%;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+}
+
+.ornaments > .ornament:before {
+  background: black;
+  content: '';
+  height: .5rem;
+  left: .7rem;
+  position: absolute;
+  width: .1rem;
+  top: -.5rem;
+}
+
+.ornaments > .ornament.-red.-on {
+  background-color: red;
+}
+
+.ornaments > .ornament.-red.-off {
+  background-color: darkred;
+}
+
+.ornaments > .ornament.-yellow.-on {
+  border: .2rem solid darkgoldenrod;
+  background-color: yellow;
+}
+
+.ornaments > .ornament.-yellow.-off {
+  border: .2rem solid darkgoldenrod;
+  background-color: darkgoldenrod;
+}
+
+.ornaments > .ornament.-blue.-on {
+  border: .2rem solid darkblue;
+  background-color: blue;
+}
+
+.ornaments > .ornament.-blue.-off {
+  border: .2rem solid darkblue;
+  background-color: darkblue;
+}
+
+.ornaments > .ornament.-purple.-on {
+  border: .2rem solid darkviolet;
+  background-color: purple;
+}
+
+.ornaments > .ornament.-purple.-off {
+  border: .2rem solid darkviolet;
+  background-color: darkviolet;
+}
+
+.ornaments.-top > .ornament.-red {
+  border: .2rem solid darkred;
+  top: -2.3rem;
+  right: -1rem;
+}
+
+.ornaments.-top > .ornament.-yellow {
+  left: -2.5rem;
+  top: -2.6rem;
+}
+
+.ornaments.-middle > .ornament.-purple {
+  left: -4rem;
+  top: -1rem;
+}
+
+.ornaments.-middle > .ornament.-blue {
+  right: -1rem;
+  top: -2.5rem;
+}
+
+.ornaments.-bottom > .ornament.-red {
+  left: -6rem;
+  top: -2.2rem;
+}
+
+.ornaments.-bottom > .ornament.-yellow {
+  right: -3rem;
+  top: .15rem;
+}
+
