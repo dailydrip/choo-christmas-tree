@@ -37,17 +37,4 @@ function view(state, emit) {
     </div>
   </body>
   `;
-
-  function handleClick() {
-    emit("clicks:add", 1);
-  }
-}
-
-function loadSounds(state, emitter, app) {
-  emitter.on("DOMContentLoaded", function() {
-    emitter.emit("audio:load", "./jingle_bell.wav");
-    emitter.on("audio:load-complete", function() {
-      emitter.emit("audio:play");
-    });
-  });
 }

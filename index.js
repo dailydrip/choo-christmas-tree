@@ -30,7 +30,7 @@ else module.exports = app;
 
 function loadSounds(state, emitter, app) {
   emitter.on("DOMContentLoaded", function() {
-    emitter.emit("audio:load", "media/the-birds.wav");
+    emitter.emit("audio:load", "assets/jingle_bell.wav");
     emitter.on("audio:load-complete", function() {
       emitter.emit("audio:play");
     });
